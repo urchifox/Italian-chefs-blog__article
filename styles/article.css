@@ -1,0 +1,41 @@
+.lead {
+    padding: 210px 0;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 85px;
+    text-align: center;
+    font-feature-settings: 'cpsp' on;
+    font-variant-ligatures: discretionary-ligatures;
+}
+
+.section-title {
+    margin: 0;
+    margin-bottom: 70px;
+    padding: 0;
+    
+    font-weight: 275;
+    font-size: 160px;
+    line-height: 244px; /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-variant: all-small-caps;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    
+    color: var(--text-light-accent);
+}
+
+.about-section {
+    background-color: var(--bg-dark);
+    padding: 132px 0 0 0;
+    
+}
+
+.about__text {
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    font-variant-ligatures: discretionary-ligatures;
+    color: #F5F1EE;
+
+    position: relative;
+    width: 500px;
+}
