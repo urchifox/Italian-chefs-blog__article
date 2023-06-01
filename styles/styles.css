@@ -1,0 +1,145 @@
+        /* ----- FONTS ----- */
+
+@font-face {
+    font-family: "Spectral";
+    src: url("../fonts/Spectral-ExtraLight.woff2") format("woff2");
+    font-weight: 275;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Spectral";
+    src: url("../fonts/Spectral-ExtraLightItalic.woff2") format("woff2");
+    font-weight: 275;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Spectral";
+    src: url("../fonts/Spectral-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Spectral";
+    src: url("../fonts/Spectral-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Spectral";
+    src: url("../fonts/Spectral-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Spectral";
+    src: url("../fonts/Spectral-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Spectral";
+    src: url("../fonts/Spectral-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Spectral";
+    src: url("../fonts/Spectral-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+        /* ----- VARIABLES ----- */
+
+:root {
+    --text-dark: #142E2C;
+    --text-light: #F5F1EE;
+    --text-light-accent: #C5AF96;
+    --bg-dark: #1E4542;
+    --bg-light: #E5E5E5;
+}
+
+
+        /* ----- BASIC STYLES ----- */
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    min-width: 1366;
+    min-height: 100vh;
+
+    background: var(--bg-light);
+
+    font-family: 'Spectral', 'Times New Roman', serif;
+    font-size: 26px;
+    line-height: 40px;
+    font-weight: 300;
+    color: var(--dark-text);
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+        /* ----- SERVICE STYLES ----- */
+
+.width-1170 {
+    width: 1170px;
+    padding: 0 98px;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+
+
+        /* ----- ELEMENT'S STATES ----- */
+
+/* ----- LINKS ----- */
+
+[class*="-link"] {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid var(--text-light-accent);
+}
+[class*="-link"]:hover {
+    border-top: 1px solid var(--text-light-accent);
+}
+[class*="-link"]:hover::before,
+[class*="-link"]:hover::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--text-light-accent);
+}
+[class*="-link"]:hover::before {
+    left: -15px;
+}
+[class*="-link"]:hover::after {
+    right: -15px;
+}
+
+/* ----- BUTTONS ----- */
+
+[class*="-btn"]:hover {
+    opacity: 0.6;
+}
+[class*="-btn"]:active {
+    opacity: 0.4;
+}
