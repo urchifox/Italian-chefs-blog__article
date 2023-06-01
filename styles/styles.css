@@ -115,6 +115,7 @@ main {
     border-bottom: 1px solid var(--text-light-accent);
 }
 [class*="-link"]:hover {
+    border-bottom: 1px solid var(--text-light-accent);
     border-top: 1px solid var(--text-light-accent);
 }
 [class*="-link"]:hover::before,

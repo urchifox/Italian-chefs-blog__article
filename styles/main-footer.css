@@ -1,3 +1,24 @@
 .main-footer {
     flex: 0 0 auto;
+    background-color: var(--bg-dark);
+    border-top: 1px solid rgba(245, 241, 238, 0.2);
+    padding: 30px 0;
+    font-size: 18px;
+    line-height: 130%; /* or 23px */
+    font-feature-settings: 'tnum' on, 'lnum' on;
+
+    color: var(--text-light);
+}
+
+.main-footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-footer__copyright {
+    margin: 0;
+}
+.main-footer__privacy-link {
+    border: none;
 }
