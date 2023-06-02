@@ -58,9 +58,15 @@
     font-feature-settings: 'tnum' on, 'lnum' on;
     color: var(--text-light);
 }
-.subscribe__form-input:focus {
-    outline: none;
+.subscribe__form-input:hover {
+    border: 1px solid var(--text-light);
+}
+.subscribe__form-input:focus-visible {
+    z-index: 1;
     border: 2px solid var(--text-light);
+    outline: none;
+    outline-offset: 1px;
+    box-shadow: 0 0 0 5px var(--text-light-accent);
 }
 .subscribe__form-input::placeholder {
     font-family: 'Spectral';
@@ -90,7 +96,16 @@
     font-feature-settings: 'tnum' on, 'lnum' on;
     color: var(--text-dark);
 }
-.subscribe__form-btn:focus {
-    outline: none;
+.subscribe__form-btn:hover {
+    opacity: 1;
+    color: var(--text-light);
+    border: 1px solid var(--text-light);
+}
+.subscribe__form-btn:active {
+    opacity: 0.6;
+}
+.subscribe__form-btn:focus-visible {
+    color: var(--text-light);
+    outline: 0;
     border: 2px solid var(--text-light);
 }

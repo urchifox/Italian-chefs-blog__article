@@ -112,28 +112,48 @@ main {
     position: relative;
     text-decoration: none;
     color: inherit;
+    border-top: 1px solid transparent;
     border-bottom: 1px solid var(--text-light-accent);
+    transition: border ease-out 1s;
 }
 [class*="-link"]:hover {
-    border-bottom: 1px solid var(--text-light-accent);
     border-top: 1px solid var(--text-light-accent);
+    border-bottom: 1px solid var(--text-light-accent);
 }
-[class*="-link"]:hover::before,
-[class*="-link"]:hover::after {
+[class*="-link"]:active {
+    opacity: 0.5;
+}
+[class*="-link"]:focus-visible {
+    outline: 1px solid var(--bg-light);
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0 5px var(--text-light-accent);
+}
+[class*="-link"]::before,
+[class*="-link"]::after {
     content: "";
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(0, -50%);
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: var(--text-light-accent);
+    transition: transform ease-out 1s, opacity ease-out 1s;
+    opacity: 0;
+}
+[class*="-link"]::before {
+    left: -10px;
+}
+[class*="-link"]::after {
+    right: -10px;
 }
 [class*="-link"]:hover::before {
-    left: -15px;
+    transform: translate(-15px, -50%);
+    opacity: 1;
 }
 [class*="-link"]:hover::after {
-    right: -15px;
+    transform: translate(15px, -50%);
+    opacity: 1;
 }
 
 /* ----- BUTTONS ----- */
@@ -143,4 +163,9 @@ main {
 }
 [class*="-btn"]:active {
     opacity: 0.4;
+}
+[class*="-btn"]:focus-visible {
+    outline: 2px solid var(--bg-light);
+    /* outline-offset: 1px; */
+    box-shadow: 0px 0px 0 5px var(--text-light-accent);
 }
