@@ -93,6 +93,10 @@ main {
     margin: 0 auto;
 }
 
+.diagonal-fraction {
+    font-variant-numeric: diagonal-fractions;
+}
+
 .visually-hidden {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
@@ -101,6 +105,12 @@ main {
     height: 1px;
     width: 1px;
     overflow: hidden;
+  }
+
+  .list-reset {
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
 

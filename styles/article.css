@@ -106,3 +106,334 @@
     text-align: center;
     font-feature-settings: 'tnum' on, 'lnum' on;
 }
+
+
+        /* ----- POPULAR RECIPES BLOCK ----- */
+
+.recipes-section {
+    /* outline: auto; */
+}
+
+.recipes-section__title {
+    line-height: 160px;
+    margin-top: 175px;
+    margin-bottom: 0;
+    color: var(--bg-dark);
+}
+.recipes-section__title div:first-child {
+    text-align: left;
+    /* margin-top: 175px; */
+    margin-bottom: 0px;
+}
+.recipes-section__title div:last-child {
+    margin-right: -32px;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+    /* ----- INGRIDIENTS SECTION ----- */
+
+.recipes-section__ingridients {
+    position: relative;
+    padding-top: 142px;
+    padding-bottom: 187px;
+    background-image: url(../img/wood.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.recipes-section__ingridients-subtitle {
+    padding: 0;
+    margin: 0;
+    margin-left: 72px;
+    margin-bottom: -245px;
+    position: relative;
+    width: 417px;
+    height: 233px;
+
+    font-style: italic;
+    font-weight: 300;
+    font-size: 62px;
+    line-height: 94px;
+    text-align: center;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+
+    color: #1E4542;
+}
+.recipes-section__ingridients-subtitle span  {
+    position: absolute;
+    top: 72px;
+    left: 10px;
+    transform: rotate(-35deg);
+}
+.recipes-section__ingridients-subtitle span:last-child {
+    top: 68px;
+    left: 146px;
+}
+
+
+.recipes-section__ingrdients-list {
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    grid-template-rows: repeat(3, 220px);
+    grid-template-areas: "title title tomatoes garlic"
+                        "olives parsley species onion"
+                        "pepper fettuccine fettucine basil";
+    gap: 0 30px;
+}
+
+[class*="recipes-section__ingridient-container_"] {
+    position: relative;
+}
+
+.recipes-section__ingridient-caption {
+    position: absolute;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    font-variant-ligatures: discretionary-ligatures;
+
+    color: var(--text-dark);
+
+    transform: rotate(-35deg);
+}
+.recipes-section__ingridient-picture {
+    position: absolute;
+}
+
+.recipes-section__ingridients-item_tomatoes {
+    grid-area: tomatoes;
+}
+.recipes-section__ingridient-container_tomatoes .recipes-section__ingridient-caption {
+    top: 49px;
+    left: -43px;
+}
+.recipes-section__ingridient-container_tomatoes .recipes-section__ingridient-picture{
+    top: 25px;
+    left: 50px;
+}
+
+.recipes-section__ingridients-item_garlic {
+    grid-area: garlic;
+}
+.recipes-section__ingridient-container_garlic .recipes-section__ingridient-caption {
+    top: 49px;
+    left: -42px;
+}
+.recipes-section__ingridient-container_garlic .recipes-section__ingridient-picture{
+    top: 63px;
+    left: 15px;
+}
+
+.recipes-section__ingridients-item_olives {
+    grid-area: olives;
+}
+.recipes-section__ingridient-container_olives .recipes-section__ingridient-caption {
+    top: 23px;
+    left: -40px;
+}
+.recipes-section__ingridient-container_olives .recipes-section__ingridient-picture{
+    top: 46px;
+    left: 30px;
+}
+
+.recipes-section__ingridients-item_parsley {
+    grid-area: parsley;
+}
+.recipes-section__ingridient-container_parsley .recipes-section__ingridient-caption {
+    top: 30px;
+    left: -35px;
+    width: 130px;
+}
+.recipes-section__ingridient-container_parsley .recipes-section__ingridient-picture{
+    top: 11px;
+    left: 2px;
+}
+
+.recipes-section__ingridients-item_species {
+    grid-area: species;
+}
+.recipes-section__ingridient-container_pepper .recipes-section__ingridient-caption {
+    top: 13px;
+    left: -44px;
+    width: 100px;
+}
+.recipes-section__ingridient-container_pepper .recipes-section__ingridient-picture{
+    top: 72px;
+    left: 16px;
+}
+.recipes-section__ingridient-container_salt .recipes-section__ingridient-caption {
+    top: 25px;
+    left: 73px;
+    width: 150px;
+}
+.recipes-section__ingridient-container_salt .recipes-section__ingridient-picture{
+    top: 50px;
+    left: 156px;
+}
+
+.recipes-section__ingridients-item_onion {
+    grid-area: onion;
+}
+.recipes-section__ingridient-container_onion .recipes-section__ingridient-caption {
+    top: 15px;
+    left: -38px;
+}
+.recipes-section__ingridient-container_onion .recipes-section__ingridient-picture{
+    top: 33px;
+    left: -12px;
+}
+
+.recipes-section__ingridients-item_bell-pepper {
+    grid-area: pepper;
+}
+.recipes-section__ingridient-container_bell-pepper .recipes-section__ingridient-caption {
+    top: 27px;
+    left: -5px;
+    width: 100px;
+}
+.recipes-section__ingridient-container_bell-pepper .recipes-section__ingridient-picture{
+    top: -16px;
+    left: 18px;
+}
+
+.recipes-section__ingridients-item_fettuccine {
+    grid-area: fettuccine;
+}
+.recipes-section__ingridient-container_fettuccine .recipes-section__ingridient-caption {
+    top: 20px;
+    left: -43px;
+}
+.recipes-section__ingridient-container_fettuccine .recipes-section__ingridient-picture{
+    top: -15px;
+    left: 29px;
+}
+
+.recipes-section__ingridients-item_basil {
+    grid-area: basil;
+}
+.recipes-section__ingridient-container_basil .recipes-section__ingridient-caption {
+    top: 10px;
+    left: -40px;
+}
+.recipes-section__ingridient-container_basil .recipes-section__ingridient-picture{
+    top: 22px;
+    left: 33px;
+}
+
+
+    /* ----- METHOD SECTION ----- */
+
+.recepies-section__method {
+    margin-bottom: 210px;
+}
+.recipes-section__method-container {
+    display: flex;
+    justify-content: space-between
+}
+
+.recipes-section__method-subtitle {
+    margin: 0;
+    margin-bottom: 35px;
+    padding: 0;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 130%; /* or 62px */
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+
+.recipes-section__method-list {
+    display: grid;
+    grid-template-columns: 370px 370px;
+    gap: 25px;
+    grid-template-areas: "step1 step2"
+                         "step3 step3";
+}
+.recipes-section__method-item {
+    line-height: 130%;  /* or 34px */
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+.recipes-section__method-item:nth-child(1) {
+    grid-area: step1;
+}
+.recipes-section__method-item:nth-child(2) {
+    grid-area: step2;
+}
+.recipes-section__method-item:nth-child(3) {
+    grid-area: step3;
+}
+.recipes-section__method-step {
+    margin: 0 0 10px 0;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 130%; /* identical to box height, or 34px */
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+.recipes-section__method-item p {
+    margin: 0;
+}
+
+.recipes-section__method-link {
+    margin: 75px 25px 0 25px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 49px; /* identical to box height */
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    border-bottom-color: var(--text-dark);
+}
+.recipes-section__method-link:hover {
+    border-top: 1px solid var(--text-dark);
+    border-bottom: 1px solid var(--text-dark);
+}
+.recipes-section__method-link::before,
+.recipes-section__method-link::after {
+    background-color: var(--text-dark);
+}
+
+.recipes-section__method-aside_container-1 {
+    position: relative;
+    margin-top: 15px;
+    width: 300px;
+    height: 300px;
+    padding: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: var(--text-light-accent);
+    overflow: hidden;
+}
+.recipes-section__method-aside_container-1::before {
+    content: ""; 
+    width: 50%;  
+    height: 100%;
+    float: right;
+    shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 100%, 50% 95%, 90% 75%, 100% 60%, 100% 50%, 90% 33%, 75% 20%, 50% 5%);
+}
+.recipes-section__method-aside_container-2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-light);
+    border-radius: 50%;
+}
+.recipes-section__method-aside_container-2::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    float: left;
+    shape-outside: polygon(0 0, 100% 0, 50% 7%, 25% 18%, 5% 33%, 0 50%, 2% 65%, 12% 80%, 35% 90%, 100% 100%, 0 100%);
+  }
+  .recipes-section__method-aside {
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;   /* or 23px */
+    text-align: center;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    font-variant-ligatures: discretionary-ligatures;
+}
