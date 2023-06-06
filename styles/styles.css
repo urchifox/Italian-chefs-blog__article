@@ -72,9 +72,10 @@ body {
     background: var(--bg-light);
 
     font-family: 'Spectral', 'Times New Roman', serif;
+    font-weight: 300;
     font-size: 26px;
     line-height: 40px;
-    font-weight: 300;
+    font-feature-settings: 'tnum' on, 'lnum' on;
     color: var(--dark-text);
 
     display: flex;
