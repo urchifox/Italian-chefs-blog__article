@@ -28,7 +28,7 @@
 
         /* ----- ABOUT BLOCK ----- */
 
-.about-section {
+.about {
     padding: 132px 0 210px 0;
     background-color: var(--bg-dark);
     color: var(--text-light);
@@ -42,30 +42,36 @@
     position: relative;
 }
 
+
 .about__circle {
-    width: 570px;
-    height: 570px; 
+    width: 550px;
+    height: 550px; 
 }
 .about__circle_left-part {
-    margin-right: -285px;
+    margin-right: -275px;
     clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-    shape-outside: circle(285px at 100% 50%);
+    /* shape-outside: circle(275px at 100% 50%); */
+    shape-outside: ellipse(273px 258px at 100% 50%);
     border-radius: 50% 0 0 50%;
     float: right;
 }
 .about__circle_right-part {
-    margin-left: -285px;
+    margin-left: -275px;
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-    shape-outside: circle(285px at 0% 50%);
+    /* shape-outside: circle(275px at 0% 50%); */
+    shape-outside: ellipse(273px 258px at 0% 50%);
     border-radius: 0 50% 50% 0;
     float: left;
 }
 
 .about__text {
     margin: 0;
+    width: 585px;
+    font-variant-ligatures: discretionary-ligatures;
 }
 .about__text_left-part {
     margin-top: -8px;
+    text-align: left;
 }
 .about__text_left-part::first-letter {
     margin: 0;
@@ -94,9 +100,7 @@
 }
 
 .about__link-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 .about__interview-link {
     font-style: italic;
@@ -110,26 +114,22 @@
 
         /* ----- POPULAR RECIPES BLOCK ----- */
 
-.recipes-section__title {
+.recipes__title {
     line-height: 160px;
     margin-top: 175px;
     margin-bottom: 0;
     color: var(--bg-dark);
-}
-.recipes-section__title div:first-child {
     text-align: left;
-    /* margin-top: 175px; */
-    margin-bottom: 0px;
 }
-.recipes-section__title div:last-child {
+.recipes__title span {
+    display: block;
     margin-right: -32px;
-    margin-bottom: 0;
     text-align: right;
 }
 
     /* ----- INGRIDIENTS SECTION ----- */
 
-.recipes-section__ingridients {
+.recipes__ingridients {
     position: relative;
     padding-top: 142px;
     padding-bottom: 187px;
@@ -138,7 +138,7 @@
     background-size: contain;
 }
 
-.recipes-section__ingridients-subtitle {
+.recipes__ingridients-subtitle {
     padding: 0;
     margin: 0;
     margin-left: 72px;
@@ -156,19 +156,19 @@
 
     color: #1E4542;
 }
-.recipes-section__ingridients-subtitle span  {
+.recipes__ingridients-subtitle span  {
     position: absolute;
     top: 72px;
     left: 10px;
     transform: rotate(-35deg);
 }
-.recipes-section__ingridients-subtitle span:last-child {
+.recipes__ingridients-subtitle span:last-child {
     top: 68px;
     left: 146px;
 }
 
 
-.recipes-section__ingrdients-list {
+.recipes__ingrdients-list {
     display: grid;
     grid-template-columns: repeat(4, 270px);
     grid-template-rows: repeat(3, 220px);
@@ -178,11 +178,11 @@
     gap: 0 30px;
 }
 
-[class*="recipes-section__ingridient-container_"] {
+[class*="recipes__ingridient-container_"] {
     position: relative;
 }
 
-.recipes-section__ingridient-caption {
+.recipes__ingridient-caption {
     position: absolute;
 
     font-weight: 400;
@@ -196,126 +196,126 @@
 
     transform: rotate(-35deg);
 }
-.recipes-section__ingridient-picture {
+.recipes__ingridient-picture {
     position: absolute;
 }
 
-.recipes-section__ingridients-item_tomatoes {
+.recipes__ingridients-item_tomatoes {
     grid-area: tomatoes;
 }
-.recipes-section__ingridient-container_tomatoes .recipes-section__ingridient-caption {
+.recipes__ingridient-container_tomatoes .recipes__ingridient-caption {
     top: 49px;
     left: -43px;
 }
-.recipes-section__ingridient-container_tomatoes .recipes-section__ingridient-picture{
+.recipes__ingridient-container_tomatoes .recipes__ingridient-picture{
     top: 25px;
     left: 50px;
 }
 
-.recipes-section__ingridients-item_garlic {
+.recipes__ingridients-item_garlic {
     grid-area: garlic;
 }
-.recipes-section__ingridient-container_garlic .recipes-section__ingridient-caption {
+.recipes__ingridient-container_garlic .recipes__ingridient-caption {
     top: 49px;
     left: -42px;
 }
-.recipes-section__ingridient-container_garlic .recipes-section__ingridient-picture{
+.recipes__ingridient-container_garlic .recipes__ingridient-picture{
     top: 63px;
     left: 15px;
 }
 
-.recipes-section__ingridients-item_olives {
+.recipes__ingridients-item_olives {
     grid-area: olives;
 }
-.recipes-section__ingridient-container_olives .recipes-section__ingridient-caption {
+.recipes__ingridient-container_olives .recipes__ingridient-caption {
     top: 23px;
     left: -40px;
 }
-.recipes-section__ingridient-container_olives .recipes-section__ingridient-picture{
+.recipes__ingridient-container_olives .recipes__ingridient-picture{
     top: 46px;
     left: 30px;
 }
 
-.recipes-section__ingridients-item_parsley {
+.recipes__ingridients-item_parsley {
     grid-area: parsley;
 }
-.recipes-section__ingridient-container_parsley .recipes-section__ingridient-caption {
+.recipes__ingridient-container_parsley .recipes__ingridient-caption {
     top: 30px;
     left: -35px;
     width: 130px;
 }
-.recipes-section__ingridient-container_parsley .recipes-section__ingridient-picture{
+.recipes__ingridient-container_parsley .recipes__ingridient-picture{
     top: 11px;
     left: 2px;
 }
 
-.recipes-section__ingridients-item_species {
+.recipes__ingridients-item_species {
     grid-area: species;
 }
-.recipes-section__ingridient-container_pepper .recipes-section__ingridient-caption {
+.recipes__ingridient-container_pepper .recipes__ingridient-caption {
     top: 13px;
     left: -44px;
     width: 100px;
 }
-.recipes-section__ingridient-container_pepper .recipes-section__ingridient-picture{
+.recipes__ingridient-container_pepper .recipes__ingridient-picture{
     top: 72px;
     left: 16px;
 }
-.recipes-section__ingridient-container_salt .recipes-section__ingridient-caption {
+.recipes__ingridient-container_salt .recipes__ingridient-caption {
     top: 25px;
     left: 73px;
     width: 150px;
 }
-.recipes-section__ingridient-container_salt .recipes-section__ingridient-picture{
+.recipes__ingridient-container_salt .recipes__ingridient-picture{
     top: 50px;
     left: 156px;
 }
 
-.recipes-section__ingridients-item_onion {
+.recipes__ingridients-item_onion {
     grid-area: onion;
 }
-.recipes-section__ingridient-container_onion .recipes-section__ingridient-caption {
+.recipes__ingridient-container_onion .recipes__ingridient-caption {
     top: 15px;
     left: -38px;
 }
-.recipes-section__ingridient-container_onion .recipes-section__ingridient-picture{
+.recipes__ingridient-container_onion .recipes__ingridient-picture{
     top: 33px;
     left: -12px;
 }
 
-.recipes-section__ingridients-item_bell-pepper {
+.recipes__ingridients-item_bell-pepper {
     grid-area: pepper;
 }
-.recipes-section__ingridient-container_bell-pepper .recipes-section__ingridient-caption {
+.recipes__ingridient-container_bell-pepper .recipes__ingridient-caption {
     top: 27px;
     left: -5px;
     width: 100px;
 }
-.recipes-section__ingridient-container_bell-pepper .recipes-section__ingridient-picture{
+.recipes__ingridient-container_bell-pepper .recipes__ingridient-picture{
     top: -16px;
     left: 18px;
 }
 
-.recipes-section__ingridients-item_fettuccine {
+.recipes__ingridients-item_fettuccine {
     grid-area: fettuccine;
 }
-.recipes-section__ingridient-container_fettuccine .recipes-section__ingridient-caption {
+.recipes__ingridient-container_fettuccine .recipes__ingridient-caption {
     top: 20px;
     left: -43px;
 }
-.recipes-section__ingridient-container_fettuccine .recipes-section__ingridient-picture{
+.recipes__ingridient-container_fettuccine .recipes__ingridient-picture{
     top: -15px;
     left: 29px;
 }
 
-.recipes-section__ingridients-item_basil {
+.recipes__ingridients-item_basil {
     grid-area: basil;
 }
-.recipes-section__ingridient-container_basil .recipes-section__ingridient-caption {
+.recipes__ingridient-container_basil .recipes__ingridient-caption {
     top: 10px;
     left: -40px;
 }
-.recipes-section__ingridient-container_basil .recipes-section__ingridient-picture{
+.recipes__ingridient-container_basil .recipes__ingridient-picture{
     top: 22px;
     left: 33px;
 }
@@ -326,12 +326,12 @@
 .recepies-section__method {
     margin-bottom: 210px;
 }
-.recipes-section__method-container {
+.recipes__method-container {
     display: flex;
     justify-content: space-between
 }
 
-.recipes-section__method-subtitle {
+.recipes__method-subtitle {
     margin: 0;
     margin-bottom: 35px;
     padding: 0;
@@ -341,39 +341,40 @@
     font-feature-settings: 'tnum' on, 'lnum' on;
 }
 
-.recipes-section__method-list {
+.recipes__method-list {
     display: grid;
     grid-template-columns: 370px 370px;
     gap: 25px;
     grid-template-areas: "step1 step2"
                          "step3 step3";
 }
-.recipes-section__method-item {
+.recipes__method-item {
     line-height: 130%;  /* or 34px */
     font-feature-settings: 'tnum' on, 'lnum' on;
 }
-.recipes-section__method-item:nth-child(1) {
+.recipes__method-item:nth-child(1) {
     grid-area: step1;
 }
-.recipes-section__method-item:nth-child(2) {
+.recipes__method-item:nth-child(2) {
     grid-area: step2;
 }
-.recipes-section__method-item:nth-child(3) {
+.recipes__method-item:nth-child(3) {
     grid-area: step3;
 }
-.recipes-section__method-step {
+.recipes__method-step {
     margin: 0 0 10px 0;
     font-weight: 500;
     font-size: 26px;
     line-height: 130%; /* identical to box height, or 34px */
     font-feature-settings: 'tnum' on, 'lnum' on;
 }
-.recipes-section__method-item p {
+.recipes__method-item p {
     margin: 0;
 }
-
-.recipes-section__method-link {
+.recipes__method-nav {
     margin: 75px 25px 0 25px;
+}
+.recipes__method-link {
     font-style: italic;
     font-weight: 400;
     font-size: 32px;
@@ -381,16 +382,16 @@
     font-feature-settings: 'tnum' on, 'lnum' on;
     border-bottom-color: var(--text-dark);
 }
-.recipes-section__method-link:hover {
+.recipes__method-link:hover {
     border-top: 1px solid var(--text-dark);
     border-bottom: 1px solid var(--text-dark);
 }
-.recipes-section__method-link::before,
-.recipes-section__method-link::after {
+.recipes__method-link::before,
+.recipes__method-link::after {
     background-color: var(--text-dark);
 }
 
-.recipes-section__method-aside_container-1 {
+.recipes__method-aside_container-1 {
     position: relative;
     margin-top: 15px;
     width: 300px;
@@ -401,28 +402,28 @@
     background-color: var(--text-light-accent);
     overflow: hidden;
 }
-.recipes-section__method-aside_container-1::before {
+.recipes__method-aside_container-1::before {
     content: ""; 
     width: 50%;  
     height: 100%;
     float: right;
     shape-outside: polygon(0 0, 100% 0, 100% 100%, 0 100%, 50% 95%, 90% 75%, 100% 60%, 100% 50%, 90% 33%, 75% 20%, 50% 5%);
 }
-.recipes-section__method-aside_container-2 {
+.recipes__method-aside_container-2 {
     position: relative;
     width: 100%;
     height: 100%;
     background-color: var(--bg-light);
     border-radius: 50%;
 }
-.recipes-section__method-aside_container-2::before {
+.recipes__method-aside_container-2::before {
     content: "";
     width: 50%;
     height: 100%;
     float: left;
     shape-outside: polygon(0 0, 100% 0, 50% 7%, 25% 18%, 5% 33%, 0 50%, 2% 65%, 12% 80%, 35% 90%, 100% 100%, 0 100%);
   }
-  .recipes-section__method-aside {
+  .recipes__method-aside {
     margin: 0;
     padding: 0;
     padding-top: 60px;
@@ -515,7 +516,7 @@
     padding-right: 47px;
     font-weight: 500;
     font-size: 26px;
-    line-height: 130%;
+    line-height: 34px;
     /* identical to box height, or 34px */
 
     font-variant: all-small-caps;
@@ -588,6 +589,9 @@
 }
 .interview__across-columns_item {
     position: relative;
+}
+.interview__across-columns_item s {
+    text-decoration: none;
 }
 .interview__across-columns_item::before,
 .interview__across-columns_item::after {

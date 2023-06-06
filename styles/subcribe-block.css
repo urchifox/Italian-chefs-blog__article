@@ -10,6 +10,7 @@
 }
 
 .subscribe__title {
+    margin: 0;
     margin-bottom: 20px;
 
     font-weight: 275;
@@ -75,7 +76,7 @@
     font-size: 32px;
     line-height: 130%; /* identical to box height, or 42px */
     font-feature-settings: 'tnum' on, 'lnum' on;
-    color: var(--text-light);
+    color: var(--bg-light);
 }
 .subscribe__form-input:focus::placeholder {
     opacity: 0.4;
